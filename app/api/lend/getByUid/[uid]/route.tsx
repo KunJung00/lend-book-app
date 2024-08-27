@@ -1,5 +1,5 @@
 // import the Request and Response classes
-
+export const runtime = "edge";
 import pool from "@/app/database/mysql";
 import { NextResponse } from "next/server";
 

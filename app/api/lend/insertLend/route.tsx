@@ -1,4 +1,4 @@
-
+export const runtime = "edge";
 import pool from "@/app/database/mysql";
 import { NextResponse } from "next/server";
 
@@ -6,14 +6,10 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
     const { uid, bid } = body;
-    console.log(uid +"  "+bid);
-    
+    console.log(uid + "  " + bid);
 
     if (!uid || !bid) {
-      return NextResponse.json(
-        { message: "data Empty" },
-        { status: 400 }
-      );
+      return NextResponse.json({ message: "data Empty" }, { status: 400 });
     }
 
     const connection = await pool.getConnection();

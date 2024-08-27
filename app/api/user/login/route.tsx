@@ -1,4 +1,4 @@
-
+export const runtime = "edge";
 import pool from "@/app/database/mysql";
 import bcrypt from "bcryptjs";
 import { FieldPacket, RowDataPacket } from "mysql2/promise";
