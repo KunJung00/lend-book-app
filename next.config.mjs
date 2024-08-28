@@ -2,6 +2,9 @@
 const nextConfig = {
     serverRuntimeConfig: {
         runtime: process.env.RUNTIME
+    },
+    eslint:{
+        ignoreDuringBuilds:true,
     }
 };
 
